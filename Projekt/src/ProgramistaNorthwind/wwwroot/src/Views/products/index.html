@@ -1,0 +1,38 @@
+<template>
+    <style> 
+        .product-instock{
+            color: forestgreen;
+        }
+        
+
+        .product-outofstock {
+            color: red;
+        }
+    </style>
+	
+    <h1>Products</h1>
+	<div class="container">  
+	  <table class="table table-condensed">
+	    <thead>
+	      <tr>
+	        <th>Name</th>
+	        <th>Category</th>
+	        <th>Unit price</th>
+	        <th>Units in stock</th>	        
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr repeat.for='row of product'>
+            <td>${row.name}</td>
+            <td>${row.category}</td>
+            <td>${row.unitPrice}</td>
+	        <td><i class="fa ${row.isInStock ? 'fa-check-circle product-instock' : 'fa-times-circle product-outofstock'} "></i></td>
+	        <td>
+	        	<a route-href="route:productsdetails; params.bind:{id:row.id}" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span> Edit </a>
+	        </td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div>
+</template>
+

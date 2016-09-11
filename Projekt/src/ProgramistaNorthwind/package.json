@@ -1,0 +1,19 @@
+{
+  "jspm": {
+    "directories": {
+      "baseURL": "wwwroot"
+    },
+    "dependencies": {
+      "aurelia-bootstrapper": "npm:aurelia-bootstrapper@^1.0.0",
+      "aurelia-framework": "npm:aurelia-framework@^1.0.1",
+      "aurelia-http-client": "npm:aurelia-http-client@^1.0.0",
+      "bootstrap": "github:twbs/bootstrap@^3.3.7",
+      "css": "github:systemjs/plugin-css@^0.1.27",
+      "font-awesome": "npm:font-awesome@^4.6.3"
+    },
+    "devDependencies": {
+      "clean-css": "npm:clean-css@^3.4.19",
+      "typescript": "npm:typescript@^1.6.2"
+    }
+  }
+}

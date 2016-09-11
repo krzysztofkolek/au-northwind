@@ -1,0 +1,38 @@
+<template>
+    <style>
+        body > div > router-view > div > table > tbody > tr > td:nth-child(5) {
+            display: flex;
+
+        }
+        body > div > router-view > div > table > tbody > tr > td:nth-child(5) > a:nth-child(1) {
+            margin-right: 5px;
+        }
+    </style>
+
+	<h1>Customers</h1>
+	<div class="container">  
+	  <table class="table table-condensed">
+	    <thead>
+	      <tr>
+	        <th>Name Company Name</th>
+	        <th>Contact Title</th>
+            <th>Address</th>
+            <th>Phone</th>
+	        <th>Action</th>	        
+	      </tr>
+	    </thead>
+	    <tbody>
+            <tr repeat.for='row of Customers'>
+                <td>${row.companyName}</td>
+                <td>${row.contactTitle}</td>
+                <td>${row.address}</td>
+                <td>${row.phone}</td>
+                <td>
+                    <a route-href="route:Customersdetails; params.bind:{id:row.id}" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span> Edit </a>
+                    <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Delete</a>
+                </td>
+            </tr>
+	    </tbody>
+	  </table>
+	</div>
+</template>

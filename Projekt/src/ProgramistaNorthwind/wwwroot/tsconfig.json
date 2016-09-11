@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "outDir": "wwwroot/app/",
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "filesGlob": [
+    "node_modules/**",
+    "wwwroot/**/*",
+    "typings/**/*"
+  ],
+  "compileOnSave": false,
+  "files": [
+    // ...
+  ]
+}

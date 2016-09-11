@@ -1,0 +1,27 @@
+<template>
+	<h1>Employees</h1>
+
+	<div class="container">  
+	  <table class="table table-condensed">
+	    <thead>
+	      <tr>
+	        <th>Name</th>
+	        <th>Job Title</th>
+	        <th>Date of hire</th>
+	        <th>Action</th>	        
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr repeat.for='row of employees'>
+	        <td>${row.name}</td>
+	        <td>${row.jobTitle}</td>
+	        <td>${row.dateOfhire}</td>
+	        <td>
+	        	<a route-href="route:employeesdetails; params.bind:{id:row.id}" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span> Edit </a>
+	        	<a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Delete</a>
+	        </td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div>
+</template>
